@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chatbot</title>
+  <style>
+    /* CSS für die Chatbox */
+    .chatbox {
+      width: 400px;
+      height: 600px;
+      background-color: white;
+      border: 1px solid black;
+      padding: 10px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbox">
+    <p>Chatbot: Hallo, wie kann ich Ihnen helfen?</p>
+    <input type="text" id="chatInput">
+    <button onclick="sendMessage()">Send</button>
+    <div id="chatOutput"></div>
+  </div>
+  <script>
+    // JavaScript-Funktion zum Senden der Nachricht
+    function sendMessage() {
+      var input = document.getElementById("chatInput").value;
+      var output = document.getElementById("chatOutput");
+      output.innerHTML += "<p>User: " + input + "</p>";
+      // Hier können Sie die Antwort des Chatbots hinzufügen
+      output.innerHTML += "<p>Chatbot: Antwort des Chatbots</p>";
+      document.getElementById("chatInput").value = "";
+    }
+  </script>
+</body>
+</html>
